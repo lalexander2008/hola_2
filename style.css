@@ -1,0 +1,193 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tarjeta {
+    background-color: #ffe3e8;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Foto principal */
+.foto {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Contenido del mensaje */
+.contenido h1 {
+    color: #ff4b6e;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.contenido p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botón para ir a otra página */
+.boton_tc{
+    margin-top: 20px;
+
+}
+
+.boton {
+    background-color: #ff4b6e;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #ff7a96;
+}
+
+/* Corazones flotantes */
+.corazones-flotantes {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.corazon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4b6e;
+    transform: rotate(45deg);
+    animation: flotar 5s infinite;
+}
+
+.corazon::before, .corazon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4b6e;
+    border-radius: 50%;
+}
+
+.corazon::before {
+    top: -10px;
+    left: 0;
+}
+
+.corazon::after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.corazon:nth-child(1) {
+    left: 0;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.corazon:nth-child(2) {
+    left: 50px;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.corazon:nth-child(3) {
+    left: 100px;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 10vh; /* Tamaño del contenedor */
+    /* Color de fondo para visualización */
+}
+    /* Estilos para la imagen */
+    .image-container img {
+        max-width: 30%; /* Ajusta el tamaño máximo de la imagen en horizontal */
+        height: auto; /* Mantiene la proporción de la imagen */
+        transform: rotate(-90deg); /* Rota la imagen para estar en horizontal */
+        border-radius: 30px;
+    }
+
+    .contenido {
+        background-color: #ffe4e1;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    /* Imagen flotando a la derecha */
+    .content img {
+        float: right; /* Hace que la imagen flote a la derecha */
+        max-width: 20%; /* Ajusta el tamaño de la imagen */
+        margin: 10px; /* Da un margen alrededor de la imagen */
+        border-radius: 8px;
+    }
+
+    /* Estilo del texto */
+    .content p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ff3366;}
